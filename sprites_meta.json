@@ -1,0 +1,151 @@
+{
+  "explorers": {
+    "file": "assets/sprites/explorers_sheet.png",
+    "frameWidth": 64,
+    "frameHeight": 64,
+    "pivot": {
+      "x": 32,
+      "y": 58
+    },
+    "rows": {
+      "vanguardia": 0,
+      "explorador": 1,
+      "ingeniera": 2,
+      "medica": 3
+    },
+    "animations": {
+      "idle": {
+        "startCol": 0,
+        "frames": 4,
+        "fps": 6
+      },
+      "move": {
+        "startCol": 4,
+        "frames": 4,
+        "fps": 10
+      },
+      "attack": {
+        "startCol": 8,
+        "frames": 4,
+        "fps": 14
+      },
+      "skill": {
+        "startCol": 12,
+        "frames": 4,
+        "fps": 12
+      },
+      "hit": {
+        "startCol": 16,
+        "frames": 4,
+        "fps": 8
+      },
+      "defeat": {
+        "startCol": 20,
+        "frames": 4,
+        "fps": 6
+      }
+    }
+  },
+  "enemies": {
+    "file": "assets/sprites/enemies_sheet.png",
+    "frameWidth": 80,
+    "frameHeight": 80,
+    "pivot": {
+      "x": 40,
+      "y": 72
+    },
+    "rows": {
+      "merodeador": 0,
+      "saltarin": 1,
+      "demoledor": 2
+    },
+    "animations": {
+      "idle": {
+        "startCol": 0,
+        "frames": 4,
+        "fps": 5
+      },
+      "move": {
+        "startCol": 4,
+        "frames": 4,
+        "fps": 8
+      },
+      "windup": {
+        "startCol": 8,
+        "frames": 4,
+        "fps": 6
+      },
+      "attack": {
+        "startCol": 12,
+        "frames": 4,
+        "fps": 12
+      },
+      "vulnerable": {
+        "startCol": 16,
+        "frames": 4,
+        "fps": 6
+      },
+      "defeat": {
+        "startCol": 20,
+        "frames": 4,
+        "fps": 6
+      }
+    }
+  },
+  "bosses": {
+    "file": "assets/sprites/bosses_sheet.png",
+    "frameWidth": 112,
+    "frameHeight": 112,
+    "pivot": {
+      "x": 56,
+      "y": 102
+    },
+    "rows": {
+      "acorazado": 0,
+      "matriarca": 1,
+      "coloso_vapor": 2
+    },
+    "animations": {
+      "idle": {
+        "startCol": 0,
+        "frames": 4,
+        "fps": 5
+      },
+      "move": {
+        "startCol": 4,
+        "frames": 4,
+        "fps": 7
+      },
+      "windup": {
+        "startCol": 8,
+        "frames": 4,
+        "fps": 6
+      },
+      "attack": {
+        "startCol": 12,
+        "frames": 4,
+        "fps": 12
+      },
+      "vulnerable": {
+        "startCol": 16,
+        "frames": 4,
+        "fps": 6
+      },
+      "defeat": {
+        "startCol": 20,
+        "frames": 4,
+        "fps": 5
+      }
+    }
+  },
+  "props": {
+    "file": "assets/sprites/props_sheet.png",
+    "frameWidth": 64,
+    "frameHeight": 64,
+    "rows": {
+      "supply_machine": 0,
+      "extraction_flare": 1,
+      "survivor": 2
+    }
+  }
+}

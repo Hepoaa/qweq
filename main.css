@@ -1,0 +1,500 @@
+/* Estilos Adaptables PC y Móvil — AOT: Titan Jackpot (Bastión Aegis) */
+@font-face {
+  font-family: 'KenneyFutureNarrow';
+  src: url('../../assets/fonts/KenneyFutureNarrow.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bg-dark: #12161f;
+  --bg-panel: #1b222f;
+  --bg-card: #242d3d;
+  --bg-card-hover: #2d384c;
+  --border-brass: #c59b27;
+  --border-muted: #455468;
+  --text-main: #f1f2f6;
+  --text-muted: #b2bec3;
+  --accent-gold: #ffd32a;
+  --accent-green: #2ed573;
+  --accent-blue: #4da6ff;
+  --accent-purple: #c56cf0;
+  --accent-red: #ff4757;
+  --accent-orange: #ffa502;
+  --font- scale: 1;
+}
+
+body.large-text {
+  font-size: 112%;
+}
+
+body.high-contrast {
+  --bg-dark: #090b10;
+  --bg-panel: #11151e;
+  --bg-card: #181f2c;
+  --border-brass: #ffeaa7;
+  --text-main: #ffffff;
+  --text-muted: #dfe6e9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.45;
+  overflow-x: hidden;
+}
+
+img, canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Contenedor Principal */
+#app-root {
+  max-width: 1180px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px 24px;
+}
+
+/* Barra Superior Militar */
+.top-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: linear-gradient(180deg, #222b3a 0%, #171d28 100%);
+  border: 2px solid var(--border-brass);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-crest {
+  width: 38px;
+  height: 38px;
+  background: #2f3b28;
+  border: 2px solid var(--accent-gold);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+}
+
+.brand-title {
+  font-family: 'KenneyFutureNarrow', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: var(--accent-gold);
+}
+
+.brand-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.resource-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.res-pill {
+  background: rgba(12, 16, 23, 0.85);
+  border: 1px solid var(--border-muted);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.res-pill.tokens { border-color: var(--accent-gold); color: var(--accent-gold); }
+.res-pill.steel { border-color: #a4b0be; color: #dfe4ea; }
+.res-pill.cores { border-color: var(--accent-orange); color: #ffbe76; }
+.res-pill.medkits { border-color: var(--accent-green); color: #7bed9f; }
+
+/* Barra de Navegación del Cuartel */
+.nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.btn {
+  cursor: pointer;
+  background: linear-gradient(180deg, #2d384c 0%, #1f2735 100%);
+  color: var(--text-main);
+  border: 2px solid var(--border-muted);
+  border-radius: 7px;
+  padding: 9px 15px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition: transform 0.1s ease, border-color 0.15s ease, background 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 42px;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: var(--accent-gold);
+  background: #334057;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, #b8860b 0%, #7d5a06 100%);
+  border-color: var(--accent-gold);
+  color: #fff;
+}
+
+.btn.success {
+  background: linear-gradient(180deg, #218c53 0%, #145934 100%);
+  border-color: var(--accent-green);
+  color: #fff;
+}
+
+.btn.danger {
+  background: linear-gradient(180deg, #b33939 0%, #782222 100%);
+  border-color: var(--accent-red);
+  color: #fff;
+}
+
+.btn.active-tab {
+  background: linear-gradient(180deg, #3c5438 0%, #263823 100%);
+  border-color: var(--accent-green);
+  color: #fff;
+}
+
+/* Paneles y Tarjetas */
+.screen-panel {
+  background: var(--bg-panel);
+  border: 2px solid var(--border-muted);
+  border-radius: 10px;
+  padding: 16px;
+  flex: 1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid var(--border-muted);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-muted);
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card.highlight {
+  border-color: var(--border-brass);
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.badge.comun { background: #3d4a59; color: #dfe4ea; border: 1px solid #8fa4b8; }
+.badge.raro { background: #193c66; color: #70a1ff; border: 1px solid #4da6ff; }
+.badge.epico { background: #3e1f54; color: #e0aaff; border: 1px solid #c56cf0; }
+.badge.legendario { background: #593e08; color: #ffeaa7; border: 1px solid #ffbe3b; }
+
+/* Sprite Boxes */
+.sprite-preview-box {
+  width: 100%;
+  height: 132px;
+  background: radial-gradient(circle, #2f394d 0%, #181e29 100%);
+  border: 1px solid var(--border-muted);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.sprite-preview-box img {
+  max-height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Máquina de Suministros (Tómbola Táctica Aegis) */
+.jackpot-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 18px;
+}
+
+.machine-stage {
+  background: linear-gradient(180deg, #1d2432 0%, #121721 100%);
+  border: 2px solid var(--border-brass);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.reels-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  background: #0f131b;
+  border: 2px solid var(--accent-gold);
+  border-radius: 8px;
+  padding: 12px 18px;
+}
+
+.reel-slot {
+  width: 72px;
+  height: 78px;
+  background: #232c3d;
+  border: 2px solid var(--border-muted);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+/* Escena de Combate y Controles Táctiles */
+.combat-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.combat-hud-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #161b26;
+  border: 2px solid var(--border-muted);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.squad-switch-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.squad-mini-btn {
+  cursor: pointer;
+  background: #222a3a;
+  border: 2px solid var(--border-muted);
+  border-radius: 6px;
+  padding: 5px 9px;
+  color: var(--text-main);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.squad-mini-btn.active {
+  border-color: var(--accent-gold);
+  background: #333f28;
+}
+
+.squad-mini-btn.ko {
+  opacity: 0.45;
+  border-color: var(--accent-red);
+}
+
+.canvas-viewport {
+  width: 100%;
+  background: #0d1017;
+  border: 2px solid var(--border-brass);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#combat-canvas {
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  aspect-ratio: 920 / 500;
+  display: block;
+}
+
+.touch-controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  background: #171d29;
+  border: 2px solid var(--border-muted);
+  border-radius: 8px;
+  padding: 10px 14px;
+  flex-wrap: wrap;
+}
+
+.joystick-zone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.joystick-base {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #2b3548 0%, #181e29 100%);
+  border: 2px solid var(--border-brass);
+  position: relative;
+  touch-action: none;
+}
+
+.joystick-stick {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  border: 2px solid #fff;
+  position: absolute;
+  top: 29px;
+  left: 29px;
+  pointer-events: none;
+}
+
+.action-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(135px, 1fr));
+  gap: 10px;
+  flex: 1;
+  max-width: 460px;
+}
+
+.tactile-btn {
+  min-height: 54px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  border-radius: 8px;
+  touch-action: manipulation;
+}
+
+/* Modales de Confirmación y Tutorial */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 10, 15, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: var(--bg-panel);
+  border: 2px solid var(--border-brass);
+  border-radius: 10px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 780px) {
+  .jackpot-layout {
+    grid-template-columns: 1fr;
+  }
+  .brand-title {
+    font-size: 1.05rem;
+  }
+  .action-buttons-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}

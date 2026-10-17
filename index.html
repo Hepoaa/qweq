@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="AOT: Titan Jackpot — Juego web 2D de acción, expediciones tácticas y máquina de suministros en el Bastión Aegis." />
+  <title>AOT: Titan Jackpot — Bastión Aegis</title>
+  <link rel="stylesheet" href="./src/styles/main.css" />
+</head>
+<body>
+  <div id="app-root">
+    <div style="padding: 40px; text-align: center; color: #f1f2f6;">
+      Cargando Bastión Aegis y hojas de sprites...
+    </div>
+  </div>
+
+  <!-- Recursos empaquetados con respaldo offline + configuración de balance + motor 2D -->
+  <script src="./src/data/assetsBundle.js"></script>
+  <script src="./src/data/gameData.js"></script>
+  <script src="./src/engine/audioAndStorage.js"></script>
+  <script src="./src/engine/combatEngine.js"></script>
+  <script src="./src/ui/app.js"></script>
+</body>
+</html>
